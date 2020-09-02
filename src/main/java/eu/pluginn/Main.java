@@ -1,5 +1,6 @@
 package eu.pluginn;
 
+import eu.pluginn.utils.ModConfig;
 import eu.pluginn.utils.ModLogging;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -31,6 +32,7 @@ public class Main
     public void init(FMLInitializationEvent event)
     {
         MinecraftForge.EVENT_BUS.register(new CommonProxy());
+        MinecraftForge.EVENT_BUS.register(new ModConfig());
     }
 
     @EventHandler
